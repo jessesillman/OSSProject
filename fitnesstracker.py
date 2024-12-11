@@ -46,7 +46,6 @@ def setup_title_section(parent, title_text, subtitle_text):
 # Add the main title section
 setup_title_section(root, "Fitness Tracker Application", "An open source application to maintain your fitness")
 
-
 # Function for BMI Calculator
 def on_bmi_click():
     # Create the BMI Calculator window
@@ -59,36 +58,6 @@ def on_bmi_click():
 
     input_frame = tk.Frame(bmi_window, bg="black")
     input_frame.pack(pady=20)
-
-
-    # Add a title for the BMI Calculator
-    # title_label = tk.Label(
-    #     bmi_window,
-    #     text="BMI Calculator",
-    #     font=("Helvetica", 20, "bold"),
-    #     bg="black",
-        #fg="white",
-        #pady=10
-    # )
-    # title_label.pack()
-
-    # Subtitle under the title
-    # subtitle_label = tk.Label(
-    #     bmi_window,
-    #     text="Calculate your Body Mass Index",
-    #     font=("Helvetica", 12, "italic"),
-    #     bg="black",
-    #     fg="gold",
-    # )
-    # subtitle_label.pack
-
-    # # Add an underline below the title
-    # underline = tk.Frame(bmi_window, bg="gold", height=3)
-    # underline.pack(fill="x", pady=(0, 20))
-
-    # # Create a frame for the input fields
-    # input_frame = tk.Frame(bmi_window, bg="black")
-    # input_frame.pack(pady=20)
 
     # Height input
     tk.Label(
@@ -193,36 +162,6 @@ def on_calorie_click():
 
     input_frame = tk.Frame(calorie_window, bg="black")
     input_frame.pack(pady=20)
-
-
-    # # Add a title for the Calorie Calculator
-    # title_label = tk.Label(
-    #     calorie_window,
-    #     text="Calorie Calculator",
-    #     font=("Helvetica", 20, "bold"),
-    #     bg="black",
-    #     fg="white",
-    #     pady=10
-    # )
-    # title_label.pack()
-
-    # # Subtitle under the title
-    # subtitle_label = tk.Label(
-    #     calorie_window,
-    #     text="Calculate your daily calorie needs",
-    #     font=("Helvetica", 12, "italic"),
-    #     bg="black",
-    #     fg="gold",
-    # )
-    # subtitle_label.pack()
-
-    # # Add an underline below the title
-    # underline = tk.Frame(calorie_window, bg="gold", height=3)
-    # underline.pack(fill="x", pady=(0, 20))
-
-    # # Create a frame for input fields
-    # input_frame = tk.Frame(calorie_window, bg="black")
-    # input_frame.pack(pady=20)
 
     # Input fields for age, gender, weight, height, and activity level
     fields = [
@@ -341,34 +280,6 @@ def on_diet_plan_click():
     
     input_frame = tk.Frame(diet_window, bg="black")
     input_frame.pack(pady=20)
-
-    
-
-    # Add a title for the Diet Plan
-    # title_label = tk.Label(
-    #     diet_window,
-    #     text="Diet Plan",
-    #     font=("Helvetica", 20, "bold"),
-    #     bg="black",
-    #     fg="white",
-    #     pady=10
-    # )
-    # title_label.pack()
-
-    # # Subtitle under the title
-    # subtitle_label = tk.Label(
-    #     diet_window,
-    #     text="Add your food items and calculate total calories",
-    #     font=("Helvetica", 12, "italic"),
-    #     bg="black",
-    #     fg="gold",
-    # )
-    # subtitle_label.pack()
-
-
-    # # Add an underline below the title
-    # underline = tk.Frame(diet_window, bg="gold", height=3)
-    # underline.pack(fill="x", pady=(0, 20))
 
     # Predefined food items with calorie values per unit
     food_items = [
@@ -575,31 +486,6 @@ def on_workouts_click():
     input_frame = tk.Frame(workouts_window, bg="black")
     input_frame.pack(pady=20)
 
-    # Add a title for the Workouts page
-    # title_label = tk.Label(
-    #     workouts_window,
-    #     text="Workouts",
-    #     font=("Helvetica", 20, "bold"),
-    #     bg="black",
-    #     fg="white",
-    #     pady=10
-    # )
-    # title_label.pack()
-
-    # # Subtitle under the title
-    # subtitle_label = tk.Label(
-    #     workouts_window,
-    #     text="Add your workouts and track your progress",
-    #     font=("Helvetica", 12, "italic"),
-    #     bg="black",
-    #     fg="gold",
-    # )
-    # subtitle_label.pack()
-
-    # # Add an underline below the title
-    # underline = tk.Frame(workouts_window, bg="gold", height=3)
-    # underline.pack(fill="x", pady=(0, 20))
-
     # Create a Listbox to display workouts
     workout_listbox = tk.Listbox(
         workouts_window,
@@ -658,7 +544,7 @@ def on_workouts_click():
         duration = duration_entry.get()
         type_ = type_entry.get()
         if name and duration and type_:
-            workout = f"{name} - {duration} mins -"
+            workout = f"{name} - {duration} mins - {type_}"
             workout_listbox.insert(tk.END, workout)  # Add workout to Listbox
             workout_name_entry.delete(0, tk.END)
             duration_entry.delete(0, tk.END)
@@ -735,31 +621,6 @@ def on_tutorials_click():
 
     input_frame = tk.Frame(tutorials_window, bg="black")
     input_frame.pack(pady=20)
-
-    # Add a title for the Tutorials page
-    # title_label = tk.Label(
-    #     tutorials_window,
-    #     text="Tutorials",
-    #     font=("Helvetica", 20, "bold"),
-    #     bg="black",
-    #     fg="white",
-    #     pady=10
-    # )
-    # title_label.pack()
-
-    # # Subtitle under the title
-    # subtitle_label = tk.Label(
-    #     tutorials_window,
-    #     text="Check out some workout tutorials",
-    #     font=("Helvetica", 12, "italic"),
-    #     bg="black",
-    #     fg="gold",
-    # )
-    # subtitle_label.pack()
-
-    # # Add an underline below the title
-    # underline = tk.Frame(tutorials_window, bg="gold", height=3)
-    # underline.pack(fill="x", pady=(0, 20))
 
     # Function to open YouTube video
     def open_video(url):
